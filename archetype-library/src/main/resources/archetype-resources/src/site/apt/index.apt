@@ -1,0 +1,14 @@
+ -----
+ About
+ -----
+ Author
+ -----
+ dd-mmm-yyyy
+ -----
+
+${artifactId}
+
+ This module provides xxxx.
+ 
+ For more information about using this Library in your Java code, please see the 
+ {{{./apidocs/index.html} Javadocs}}. 

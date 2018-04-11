@@ -1,0 +1,20 @@
+ ------
+ About
+ ------
+ ------
+ Date
+ ------
+
+Welcome to ${artifactId} Home page 
+
+${artifactId} is a MyCom standard framework for .....
+  
+These modules are actively developed, maintained and supported by {{{./team-list.html}MyCom Team}} within Security Architecture.
+
+*---------------------------------------------------------------------+----------------------------------------------------------------+
+|{{{./${artifactId}/${artifactId}-api/index.html}${artifactId} API}}				|${artifactId} API (Base API)		               |
+*---------------------------------------------------------------------+----------------------------------------------------------------+
+|{{{./${artifactId}/${artifactId}-impl/index.html}${artifactId} Implementation}}		|${artifactId} Base Implementation	               |
+*---------------------------------------------------------------------+----------------------------------------------------------------+
+
+ Check out the {{{https://wiki.mycom.com/index.php?title=Category:${artifactId}}wiki pages}} for more information.

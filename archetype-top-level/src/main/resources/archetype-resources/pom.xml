@@ -1,0 +1,195 @@
+#set( $dollar = '$' )
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>${groupId}</groupId>
+	<artifactId>${artifactId}</artifactId>
+	<version>${version}</version>
+	<packaging>pom</packaging>
+
+	<name>${artifactId}</name>
+	<description>Top Level Project of ${artifactId}</description>
+	<inceptionYear>2008</inceptionYear>
+
+	<properties>
+		<log4j.version>1.2.13</log4j.version>
+		<spring.version>2.5.6</spring.version>
+	</properties>
+
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>commons-logging</groupId>
+				<artifactId>commons-logging</artifactId>
+				<version>1.1</version>
+			</dependency>
+			<dependency>
+				<groupId>commons-discovery</groupId>
+				<artifactId>commons-discovery</artifactId>
+				<version>0.2</version>
+			</dependency>
+			<dependency>
+				<groupId>log4j</groupId>
+				<artifactId>log4j</artifactId>
+				<version>${dollar}{log4j.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>xerces</groupId>
+				<artifactId>xercesImpl</artifactId>
+				<version>2.6.2</version>
+			</dependency>
+			<dependency>
+				<groupId>junit</groupId>
+				<artifactId>junit</artifactId>
+				<version>4.5</version>
+				<scope>test</scope>
+			</dependency>
+			<dependency>
+				<groupId>javax.servlet</groupId>
+				<artifactId>servlet-api</artifactId>
+				<version>2.4</version>
+			</dependency>
+			<dependency>
+				<groupId>javax.mail</groupId>
+				<artifactId>mail</artifactId>
+				<version>1.4</version>
+			</dependency>
+			<dependency>
+				<groupId>javax.activation</groupId>
+				<artifactId>activation</artifactId>
+				<version>1.1</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-context</artifactId>
+				<version>${dollar}{spring.version}</version>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
+	<scm>
+		<connection>scm:svn:https://svn.mycom.com/svn/${artifactId}/trunk</connection>
+		<developerConnection>scm:svn:https://svn.mycom.com/svn/${artifactId}/trunk</developerConnection>
+	</scm>
+
+	<organization>
+		<name>MyCom Financial</name>
+		<url>https://mycom.com</url>
+	</organization>
+
+	<developers>
+		<developer>
+			<id>myusername</id>
+			<name>My Name</name>
+			<email>my.email-address@mycom.com</email>
+			<organization>MyCom Financial</organization>
+			<roles>
+				<role>Developer</role>
+			</roles>
+			<timezone>-5</timezone>
+		</developer>
+	</developers>
+
+	<!-- <issueManagement> <system>jira</system> <url>https://itrack.mycom.com/browse/MYPROJECT</url> 
+		</issueManagement> -->
+
+	<!-- <mailingLists> <mailingList> <name>My Mailing List</name> <subscribe>my-mailing-list-subscribe@pioneer.mycom.com</subscribe> 
+		<unsubscribe>my-mailing-list-unsubscribe@pioneer.mycom.com</unsubscribe> 
+		<post>my-mailing-list@pioneer.mycom.com</post> <archive>http://pioneer.mycom.com/pipermail/my-mailing-list/</archive> 
+		</mailingList> </mailingLists> -->
+
+	<distributionManagement>
+		<repository>
+			<id>mycom.release</id>
+			<name>MyCom release repository</name>
+			<url>http://nexus.mycom.com/content/repositories/internal-releases</url>
+		</repository>
+		<snapshotRepository>
+			<id>mycom.snapshot</id>
+			<name>MyCom snapshots repository</name>
+			<url>http://nexus.mycom.com/content/repositories/internal-snapshots</url>
+		</snapshotRepository>
+		<site>
+			<id>${artifactId}.website</id>
+			<name>${artifactId} web site</name>
+			<url>scpexe://web10w100m3.mycom.com/mycom/prd/tech/web/code/docs/${artifactId}</url>
+		</site>
+	</distributionManagement>
+
+	<build>
+		<!-- Uncomment the following if you want to override the default build 
+			settings <sourceDirectory>\${basedir}/src/main/java</sourceDirectory> <scriptSourceDirectory>\${basedir}/src/main/scripts</scriptSourceDirectory> 
+			<testSourceDirectory>\${basedir}/src/test/java</testSourceDirectory> <outputDirectory>\${basedir}/target/classes</outputDirectory> 
+			<testOutputDirectory>\${basedir}/target/test-classes</testOutputDirectory> 
+			<resources> <resource> <directory>\${basedir}/src/main/resources</directory> 
+			<excludes> <exclude>**/*.xjb</exclude> </excludes> <includes> <include>META-INF/**</include> 
+			<include>**/*.properties</include> <include>**/*.wsdl</include> <include>**/*.xml</include> 
+			<include>**/*.xsd</include> <include>**/*.xsl</include> <include>**/*.xslt</include> 
+			</includes> </resource> </resources> <testResources> <testResource> <directory>\${basedir}/src/test/resources</directory> 
+			<excludes> <exclude>**/*.xjb</exclude> </excludes> </testResource> </testResources> -->
+
+		<!-- Configuring plugin information for project builds that inherit from 
+			this one -->
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-compiler-plugin</artifactId>
+					<configuration>
+						<source>1.6</source>
+						<target>1.6</target>
+					</configuration>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+
+	</build>
+
+	<!-- Elements that correspond specifically for the site generation phase -->
+	<reporting>
+		<outputDirectory>\${basedir}/target/site</outputDirectory>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-changelog-plugin</artifactId>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-pmd-plugin</artifactId>
+				<configuration>
+					<linkXref>true</linkXref>
+					<sourceEncoding>UTF-8</sourceEncoding>
+					<minimumTokens>100</minimumTokens>
+					<targetJdk>1.6</targetJdk>
+					<excludes>
+						<exclude>**/*Bean.java</exclude>
+						<exclude>**/generated-sources/**/*.java</exclude>
+					</excludes>
+					<excludeRoots>
+						<excludeRoot>target/generated-sources/stubs</excludeRoot>
+					</excludeRoots>
+				</configuration>
+			</plugin>
+			<!-- <plugin> <groupId>org.codehaus.mojo</groupId> <artifactId>cobertura-maven-plugin</artifactId> 
+				</plugin> -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jxr-plugin</artifactId>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-javadoc-plugin</artifactId>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-project-info-reports-plugin</artifactId>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-report-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</reporting>
+
+</project>

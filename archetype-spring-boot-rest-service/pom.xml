@@ -1,0 +1,49 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>com.mycom.maven</groupId>
+		<artifactId>archetypes-parent</artifactId>
+		<version>1.1-SNAPSHOT</version>
+	</parent>
+
+	<groupId>com.mycom.maven</groupId>
+	<artifactId>archetype-spring-boot-rest-service</artifactId>
+	<version>1.1-SNAPSHOT</version>
+
+	<name>Maven Archetype - archetype-spring-boot-rest-service</name>
+	<description>Maven Archetype for creating a Spring Boot/MVC REST Service</description>
+	<packaging>maven-archetype</packaging>
+
+	<build>
+		<extensions>
+			<extension>
+				<groupId>org.apache.maven.archetype</groupId>
+				<artifactId>archetype-packaging</artifactId>
+				<version>3.0.0</version>
+			</extension>
+		</extensions>
+		<plugins>
+			<plugin>
+				<artifactId>maven-archetype-plugin</artifactId>
+				<version>3.0.0</version>
+				<extensions>true</extensions>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-resources-plugin</artifactId>
+				<version>3.0.2</version>
+				<extensions>true</extensions>
+				<configuration>
+					<escapeString>\</escapeString>
+					<nonFilteredFileExtensions>
+						<nonFilteredFileExtension>keystore</nonFilteredFileExtension>
+						<nonFilteredFileExtension>png</nonFilteredFileExtension>
+					</nonFilteredFileExtensions>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>

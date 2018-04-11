@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<!-- The Basics -->
+	<groupId>com.mycom.maven</groupId>
+	<artifactId>archetypes-parent</artifactId>
+	<version>1.1-SNAPSHOT</version>
+
+	<!-- Packaging type required to be pom for Parent/Aggregation (multi-module) 
+		projects -->
+	<!-- Elements in the parent POM that are inherited by its children are: 
+		dependencies, developers and contributors, plugin lists, reports lists, plugin 
+		executions with matching ids and plugin configuration -->
+	<packaging>pom</packaging>
+
+	<!-- Parent POM project may aggregate even those projects (modules) that 
+		do not inherit from it -->
+	<modules>
+		<module>archetype-top-level</module>
+		<module>archetype-library</module>
+		<module>archetype-api-library</module>
+		<module>archetype-spring-boot-rest-service</module>
+		<module>archetype-spring-mvc-rest-service</module>
+  </modules>
+
+	<!-- Value placeholders that are accessible anywhere within a POM by using 
+		the notation ${X} , where X is the property. -->
+	<properties/>
+
+	<!-- More Project Information -->
+	<name>Maven 3.x Archetypes Parent</name>
+	<description>Parent POM for all Maven 3.x My Com Archetypes</description>
+	<inceptionYear>2017</inceptionYear>
+	<organization>
+		<name>My Com</name>
+		<url>https://mycom.com</url>
+	</organization>
+	<developers>
+		<developer>
+			<id>ksundara</id>
+			<name>Kannan Sundaramoorthy</name>
+			<email>kannan.sundaramoorthy@mycom.com</email>
+			<organizationUrl>http://mycom.com</organizationUrl>
+			<roles>
+				<role>Architect</role>
+				<role>Developer</role>
+			</roles>
+			<timezone>-5</timezone>
+		</developer>
+	</developers>
+
+	<contributors>
+	</contributors>
+
+	<!-- Environment Settings -->
+
+	<!-- Issue Management - This defines the defect tracking system. Its primarily 
+		used for generating project documentation -->
+	<issueManagement>
+		<system>jira</system>
+		<url>https://jira.mycom.com/browse/SDEV/</url>
+	</issueManagement>
+
+	<!-- Info for connection to the version control system through Maven -->
+	<!--
+	<scm>
+		<connection>scm:svn:http://svn.mycom.com/svn/m3-archetypes/trunk/</connection>
+		<developerConnection>scm:svn:https://svn.mycom.com/svn/m3-archetypes/trunk/</developerConnection>
+		<url>http://svn.mycom.com/svn/m3-archetypes/trunk/</url>
+	</scm> 
+	-->
+	<scm>
+    	<connection>scm:git:https://github.mycom.com/m3-archetypes</connection>
+    	<url>https://github.mycom.com/m3-archetypes</url>
+    	<developerConnection>scm:git:https://${gituser}:${gitpass}@github.mycom.com/m3-archetypes
+        </developerConnection>
+    	<tag>HEAD</tag>
+  	</scm>
+
+	<distributionManagement>
+		<repository>
+			<id>mycom.release</id>
+			<name>MyCom release repository</name>
+			<url>http://nexus.mycom.com/content/repositories/internal-releases</url>
+		</repository>
+		<snapshotRepository>
+			<id>mycom.snapshot</id>
+			<name>MyCom snapshots repository</name>
+			<url>http://nexus.mycom.com/content/repositories/internal-snapshots</url>
+		</snapshotRepository>
+	</distributionManagement>
+
+</project>

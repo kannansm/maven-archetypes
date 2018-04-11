@@ -1,0 +1,13 @@
+ -----
+ About
+ -----
+ Author
+ -----
+ dd-mmm-yyyy
+ -----
+
+${artifactId}
+
+This module provides Implementation .
+ 
+For more information about using Implementation in your Java code, please see the {{{./apidocs/index.html} Javadocs}}. 

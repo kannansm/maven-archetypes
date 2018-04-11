@@ -1,0 +1,24 @@
+<archetype
+	xmlns="http://maven.apache.org/plugins/maven-archetype-plugin/archetype/1.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/plugins/maven-archetype-plugin/archetype/1.0.0 http://maven.apache.org/xsd/archetype-1.0.0.xsd">
+	<id>mycom-archetype-library</id>
+	<sources>
+		<source>src/main/java/App.java</source>
+		<source>src/main/java/README.txt</source>
+	</sources>
+	<siteResources>
+		<resource>src/site/apt/index.apt</resource>
+		<resource>src/site/apt/release.apt</resource>
+		<resource>src/site/resources/images/logos/spring_java.png</resource>
+		<resource>src/site/site.xml</resource>
+	</siteResources>
+	<testSources>
+		<source>src/test/java/AppTest.java</source>
+		<source>src/test/java/README.txt</source>
+	</testSources>
+	<testResources>
+		<resource>src/test/resources/App.properties</resource>
+		<resource>src/test/resources/log4j.xml</resource>
+	</testResources>
+</archetype>

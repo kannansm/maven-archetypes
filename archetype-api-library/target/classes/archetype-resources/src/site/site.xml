@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project name="${artifactId}">
+  <publishDate position="navigation-bottom"/>
+  <bannerLeft>
+       <name>MyCom</name>
+       <src>/images/logos/spring_java.png</src>
+       <href>https://mycom.com</href>
+  </bannerLeft>
+  <bannerRight>
+   	<name>${artifactId} Home</name>
+   	<href>index.html</href>
+  </bannerRight>
+  <body>
+    <breadcrumbs>
+      <item name="${artifactId} Home" href="/index.html"/>
+    </breadcrumbs>
+    <menu name="Overview">
+      <item name="Introduction" href="/index.html"/>
+      <item name="Project Team" href="/team-list.html"/>
+      <item name="Release Notes" href="/release.html"/>
+      <item name="Javadocs" href="/apidocs/index.html" target="_blank"/>
+    </menu>
+    <menu name="Modules">
+      <item name="${artifactId} API" href="${artifactId}/${artifactId}-api/index.html" />
+      <item name="${artifactId} Impl" href="${artifactId}/${artifactId}-impl/index.html"/>
+    </menu>
+    <menu ref="reports"/>
+  </body>
+</project>

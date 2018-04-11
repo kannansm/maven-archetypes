@@ -1,0 +1,1 @@
+This package contains multi-module library with API and Implementation modules.

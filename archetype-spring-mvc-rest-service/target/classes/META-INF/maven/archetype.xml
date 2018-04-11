@@ -1,0 +1,31 @@
+<archetype
+	xmlns="http://maven.apache.org/plugins/maven-archetype-plugin/archetype/1.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/plugins/maven-archetype-plugin/archetype/1.0.0 http://maven.apache.org/xsd/archetype-1.0.0.xsd">
+	<id>mycom-archetype-library</id>
+	<sources>
+		<source>src/main/java/SampleController.java</source>
+	</sources>
+	<resources>
+		<resource>src/main/config/jetty9/WEB-INF/jetty-https.xml</resource>
+		<resource>src/main/config/jetty9/WEB-INF/jetty-ssl.xml</resource>
+		<resource>src/main/config/jetty9/WEB-INF/jetty.xml</resource>
+		<resource>src/main/resources/app.properties</resource>
+		<resource>src/main/resources/log4j.xml</resource>
+		<resource>src/main/webapp/META-INF/MANIFEST.MF</resource>
+		<resource>src/main/webapp/WEB-INF/spring-servlet.xml</resource>
+		<resource>src/main/webapp/WEB-INF/web.xml</resource>
+	</resources>
+	<siteResources>
+		<resource>src/site/apt/index.apt</resource>
+		<resource>src/site/apt/release.apt</resource>
+		<resource>src/site/resources/images/logos/spring_java.png</resource>
+		<resource>src/site/site.xml</resource>
+	</siteResources>
+	<testSources>
+		<source>src/test/java/SampleControllerTest.java</source>
+	</testSources>
+	<testResources>
+		<resource>src/test/resources/log4j.xml</resource>
+	</testResources>
+</archetype>

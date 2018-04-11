@@ -1,0 +1,13 @@
+ -----
+ About
+ -----
+ Author
+ -----
+ dd-mmm-yyyy
+ -----
+
+${artifactId}
+
+This module provides Interfaces.
+ 
+For more information about using Interfaces in your Java code, please see the {{{./apidocs/index.html} Javadocs}}. 

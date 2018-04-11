@@ -1,0 +1,23 @@
+ ------
+ Release Notes
+ ------
+ Author
+ ------
+ yyyy-dd-mm
+ ------
+
+${artifactId} Web Application/Service Release Notes
+
+  ${artifactId} ${version} was released on mm/dd/yyyy.
+
+* Highlights
+
+  [[1]] Highlight 1
+
+
+* Release Notes
+
+	** Improvement
+
+		* [SDEV-XXX] - XXX
+
